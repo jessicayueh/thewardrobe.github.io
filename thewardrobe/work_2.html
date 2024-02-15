@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Wardrobe</title>
+	<style>
+        body {
+            margin: 0;
+            overflow: auto;
+            position: relative;
+        }
+
+        video {
+            position: fixed;
+            top: 50%;
+            left: 50%;
+            min-width: 100%;
+            min-height: 100%;
+            width: auto;
+            height: auto;
+            transform: translate(-50%, -50%);
+            z-index: -1;
+        }
+		.content_1, .content_2, .content_3, .content_4 {
+			position: fixed;
+			top: 50%;
+			left: 50%;
+			z-index: 2;			
+			transform: translate(-50%, -50%);
+			font-family: "Kalnia";
+			
+		}
+        .content_1 {  
+			text-align: center;
+			color: #4527A0;
+			font-size: 5em;
+			opacity: 0;
+			animation: fadeInOut 6s forwards;		
+		}
+
+        .content_2 {  
+			text-align: center;
+			color: white;
+			font-size: 5em;
+			opacity: 0;
+			animation: fadeInOut 6s forwards; 
+			animation-delay: 5.5s; 
+		}
+			
+		
+        .content_3 { 
+			text-align: center;
+			color: #e7b8f7;
+			font-size: 5em;
+			opacity: 0;
+			animation: fadeInOut 6s forwards; 
+			animation-delay: 11s; 
+		}
+		
+        .content_4 { 
+			text-align: center;
+			color: #F8BBD0;
+			font-size: 6em;
+			opacity: 0;
+			animation: fadeInOut 6s forwards; 
+			animation-delay: 16.5s; 
+		}
+		.show {
+			z-index: 1; 
+			opacity: 0; 
+			animation: rightoleft 20s forwards linear; 		
+		}
+		.show img {
+			height: 200px;
+			margin: 20px;
+			opacity: 0.8;
+		}
+		.show2 {
+			z-index: 1; 
+			opacity: 0;
+			animation: leftoright 20s forwards linear; 	
+		}
+		.show2 img {
+			height: 200px;
+			margin: 20px;
+			opacity: 0.8;
+		}
+		.welcome {
+			position: fixed;
+			top: 50%;
+			left: 50%;
+			width:300px;
+			height:250px;
+			background-color:white;
+			z-index: 2;
+			transform: translate(-50%, -50%);
+			opacity: 0;
+			animation: enter 5s forwards ease-in;
+			animation-delay: 20s;
+		}
+
+		.welcome img {
+			height: 200px;
+			margin: 15px; /* Adjust the margin as needed */
+		}
+		.welcome a {
+			text-decoration: none; /* Remove underline */
+			color: inherit; /* Inherit the color from the parent */
+		}
+
+		@keyframes fadeInOut {
+			0%, 100% {
+				opacity: 0;
+			}
+			50% {
+				opacity: 1;
+			}
+		}
+		@keyframes rightoleft {
+			0% {
+				transform: translateX(100%);
+				opacity: 0;
+			}
+			25% {
+				transform: translateX(50%);
+				opacity: 0.5;
+			}
+			50% {
+				transform: translateX(0%);
+				opacity: 1;
+			}
+			
+			75% {
+				transform: translateX(-50%);
+				opacity: 0.5;
+			}
+			
+			100% {
+				transform: translateX(-100%);
+				opacity: 0;
+			}
+			
+		}
+		@keyframes leftoright {
+			0% {
+				transform: translateX(-100%);
+				opacity: 0;
+			}
+			25% {
+				transform: translateX(-50%);
+				opacity: 0.5;
+			}
+			50% {
+				transform: translateX(0%);
+				opacity: 1;
+			}
+			
+			75% {
+				transform: translateX(50%);
+				opacity: 0.5;
+			}
+			
+			100% {
+				transform: translateX(100%);
+				opacity: 0;
+			}
+			
+		}
+		@keyframes enter {
+			0%{
+				opacity: 0;
+			}
+			100% {
+				opacity: 1;
+			}
+		}
+	
+	</style>
+</head>
+<body>
+    <video autoplay muted loop>
+        <source src="earth.mp4" type="video/mp4">
+    </video>
+	<div class="content">
+		<div class="content_1">
+			<h1>You're</h1> 
+		</div>
+		<div class="content_2">
+			<h1>invited</h1>
+		</div>
+		<div class="content_3">
+			<h1>to visit</h1>
+		</div>
+		<div class="content_4">
+			<h1>The<br>Wardrobe</h1>
+		</div>
+	</div>
+	<div class="show">
+		<img src="cloth1_1.jpg">
+		<img src="cloth2_1.jpg">
+		<img src="cloth3_2.jpg">
+		<img src="cloth4_2.jpg">
+		<img src="cloth5_4.jpg">
+		<img src="cloth6_1.jpg">		
+	</div>
+	<div class="show2">
+		<img src="cloth1_4.jpg">
+		<img src="cloth2_2.jpg">
+		<img src="cloth3_4.jpg">
+		<img src="cloth4_3.jpg">
+		<img src="cloth5_6.jpg">
+		<img src="cloth6_4.jpg">		
+	</div>
+	<div class="welcome">
+		<a href="page_1.html"><img src="come.png">ENTER</a>			
+	</div>
+	
+</body>
+</html>

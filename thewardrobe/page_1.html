@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Wardrobe</title>
+    <style>
+        .title {
+            position: fixed;
+            min-width: 100%;
+            background-color: black;
+            color: #F8BBD0;
+            text-align: center;
+            font-size: 1em;
+            z-index: 1;
+        }
+		body {
+			margin: 0;
+			overflow-x: hidden;
+		}
+		a {
+			text-decoration: none;
+		}
+        #backgroundVideo {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            z-index: -1;
+        }
+        .subtitle {
+			position: absolute;
+			min-width: 100%;
+			top: 15%;
+			background-color: black;
+			color: white;
+			text-align: center;
+			font-size: 1em;
+			overflow-x: hidden;
+		}
+		.subtitle th, .subtitle td {
+			width: 25%; 
+			padding: 10px; 
+			box-sizing: border-box;
+		}
+
+
+        .clothing-category {
+            display: none;
+            position: absolute;
+            top: 25%;
+            min-width: 100%;
+            background-color: white;
+            color: black;
+            text-align: center;
+            font-size: 1em;
+            padding: 10px;
+        }
+
+        .clothing-category img {
+            max-width: 200px;
+            height: auto; 
+            margin: 10px;
+        }
+		#scrollTopBtn {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            background-color: #AD1457;
+            color: white;
+            border: none;
+            padding: 10px;
+            cursor: pointer;
+            border-radius: 5px;
+        }
+
+    </style>
+</head>
+<body>
+    <video id="backgroundVideo" src="heart.mp4" muted autoplay loop></video>
+
+    <div class="title">
+        <h1>The Wardrobe</h1>
+    </div>
+
+    <table class="subtitle">
+        <thead>
+            <tr>
+                <th onclick="showCategory('newIn')">NEW IN</th>
+                <th onclick="showCategory('tops')">TOPS</th>
+                <th onclick="showCategory('bottoms')">BOTTOMS</th>
+                <th onclick="showCategory('outerwears')">OUTERWEARS</th>
+            </tr>
+        </thead>
+    </table>
+
+	<div id="newIn" class="clothing-category">
+		<h3>NEW IN</h3>
+		<table style="margin: 0 auto;">
+			<tr>
+            <td><a href="cloth1.html" target="_blank"><img src="cloth1_1.jpg" alt="cloth_1"></a></td>
+            <td><a href="cloth2.html" target="_blank"><img src="cloth2_1.jpg" alt="cloth_2"></a></td>
+            <td><a href="cloth3.html" target="_blank"><img src="cloth3_1.jpg" alt="cloth_3"></a></td>
+            <td><a href="cloth4.html" target="_blank"><img src="cloth4_1.jpg" alt="cloth_4"></a></td>			
+			</tr>
+			<tr>
+            <td><a href="cloth1.html" target="_blank">Floral Slip Dress<br>NT. 1500</a></td>
+            <td><a href="cloth2.html" target="_blank">Vibrant Sweater<br>NT. 900</a></td>
+            <td><a href="cloth3.html" target="_blank">Puff Jacket<br>NT. 3980</a></td>
+            <td><a href="cloth4.html" target="_blank">Straight Leg Jeans<br>NT. 1980</a></td>			
+			</tr>
+			<tr>
+            <td><a href="cloth5.html" target="_blank"><img src="cloth5_1.jpg" alt="cloth_5"></a></td>
+            <td><a href="cloth6.html" target="_blank"><img src="cloth6_1.jpg" alt="cloth_6"></a></td>
+			<td></td>
+			<td></td>
+			</tr>
+			<tr>
+            <td><a href="cloth5.html" target="_blank">Gradient-effect Velvet Skirt<br>NT. 1680</a></td>
+            <td><a href="cloth6.html" target="_blank">Floral Pattern Cardigan<br>NT. 1300</a></td>
+			<td></td>
+			<td></td>
+			</tr>
+		</table>
+	</div>
+
+    <div id="tops" class="clothing-category">
+        <h3>TOPS</h3>
+		<table style="margin: 0 auto;">
+			<tr>
+            <td><a href="cloth1.html" target="_blank"><img src="cloth1_1.jpg" alt="cloth_1"></a></td>
+            <td><a href="cloth2.html" target="_blank"><img src="cloth2_1.jpg" alt="cloth_2"></a></td>
+            <td><a href="cloth6.html" target="_blank"><img src="cloth6_1.jpg" alt="cloth_6"></a></td>
+			<td></td>
+			</tr>
+			<tr>
+            <td><a href="cloth1.html" target="_blank">Floral Slip Dress<br>NT. 1500</a></td>
+            <td><a href="cloth2.html" target="_blank">Vibrant Sweater<br>NT. 900</a></td>
+            <td><a href="cloth6.html" target="_blank">Floral Pattern Cardigan<br>NT. 1300</a></td>
+			<td></td>
+			</tr>
+		</table>
+    </div>
+
+    <div id="bottoms" class="clothing-category">
+        <h3>BOTTOMS</h3>
+		<table style="margin: 0 auto;">
+			<tr>
+            <td><a href="cloth4.html" target="_blank"><img src="cloth4_1.jpg" alt="cloth_4"></a></td>
+            <td><a href="cloth5.html" target="_blank"><img src="cloth5_1.jpg" alt="cloth_5"></a></td>
+			<td></td>
+			<td></td>
+			</tr>
+			<tr>
+            <td><a href="cloth4.html" target="_blank">Straight Leg Jeans<br>NT. 1980</a></td>
+            <td><a href="cloth5.html" target="_blank">Gradient-effect Velvet Skirt<br>NT. 1680</a></td>
+			<td></td>
+			<td></td>
+		</table>
+    </div>
+    <div id="outerwears" class="clothing-category">
+        <h3>OUTERWEARS</h3>
+		<table style="margin: 0 auto;">
+			<tr>
+            <td><a href="cloth3.html" target="_blank"><img src="cloth3_1.jpg" alt="cloth_3"></a></td>
+            <td></td>
+			<td></td>
+			<td></td>
+			</tr>
+			<tr>
+            <td><a href="cloth3.html" target="_blank">Puff Jacket<br>NT. 3980</a></td>
+            <td></td>
+			<td></td>
+			<td></td>
+			</tr>
+		</table>
+    </div>
+
+	<button id="scrollTopBtn" onclick="scrollToTop()">To The Top ▲</button>
+
+    <script>
+        function showCategory(category) {
+            // 隱藏所有商品類別
+            var categories = document.getElementsByClassName('clothing-category');
+            for (var i = 0; i < categories.length; i++) {
+                categories[i].style.display = 'none';
+            }
+
+            // 隱藏背景影片
+            document.getElementById('backgroundVideo').style.display = 'none';
+
+            // 顯示選中的商品類別
+            document.getElementById(category).style.display = 'block';
+        }
+
+        function scrollToTop() {
+            document.body.scrollTop = 0; // For Safari
+            document.documentElement.scrollTop = 0; // For Chrome, Firefox, IE, and Opera
+        }
+    </script>
+
+</body>
+</html>
